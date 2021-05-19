@@ -1,4 +1,4 @@
-package com.example.miaplicacion
+package com.repro_cbtis
 
 import org.junit.Test
 
