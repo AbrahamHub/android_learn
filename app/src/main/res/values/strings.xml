@@ -2,5 +2,5 @@
     <string name="app_name">Reproductor CBTis</string>
     <string name="aceptar">Aceptar</string>
     <string name="permiso_requerido">El permiso de acceder a la memoria es requerido</string>
-    <string name="sin_musica">No hay musica</string>
+    <string name="sin_musica">No hay música</string>
 </resources>
