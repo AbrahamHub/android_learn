@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/sin_musica"
+        android:id="@+id/mensajeSinMusica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sin_musica"
@@ -16,55 +16,61 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/anterior"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="600dp"
-        android:background="@drawable/ic_anter"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/play"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="600dp"
-        android:background="@drawable/ic_play"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/siguiente"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="600dp"
-        android:background="@drawable/ic_sig"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-     <TextView
-         android:id="@+id/can_repro"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="-----"
-         app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintLeft_toLeftOf="parent"
-         app:layout_constraintRight_toRightOf="parent" />
-    <ListView
-        android:id="@+id/listmusic"
+    <TextView
+        android:id="@+id/cancionActual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="115dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/purple_200"
+        android:text="---"
+        android:layout_marginBottom="80dp"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:layout_margin="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodeText"
         />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/botonPlayPausa"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/botonAnterior"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_anter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/botonPlayPausa" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/botonSiguiente"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_sig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/botonPlayPausa"/>
+
+
+    <ListView
+        android:id="@+id/listaMusica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
